@@ -2,6 +2,7 @@
 
 #include <memory>
 
+class DebugLog;
 
 template <class T>
 class Buffer
@@ -81,7 +82,7 @@ public:
     {
         if (index >= size_)
         {
-            Debug::Error("Array index out of range: ", index, size_);
+            DebugLog::Error("Array index out of range: ", index, size_);
             return value_[0];
         }
         return value_[index];
@@ -91,7 +92,7 @@ public:
     {
         if (index >= size_)
         {
-            Debug::Error("Array index out of range: ", index, size_);
+            DebugLog::Error("Array index out of range: ", index, size_);
             return value_[0];
         }
         return value_[index];
